@@ -1,0 +1,5 @@
+aws_region  = "us-east-1"
+db_password = "REPLACE_WITH_STRONG_PASSWORD"
+db_username = "gocrud_admin"
+github_org  = "REPLACE_WITH_YOUR_GITHUB_ORG_OR_USER"
+github_repo = "infra-as-code-terraform"

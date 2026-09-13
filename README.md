@@ -29,25 +29,25 @@ networking → (security + data) → compute → delivery
 
 ## Daily workflow
 
-| Command          | Effect                                      |
-|------------------|---------------------------------------------|
-| `make dev-up`    | Spin up dev infrastructure                  |
-| `make dev-down`  | Tear down dev infrastructure (zero cost)    |
-| `make dev-plan`  | Preview changes before applying             |
-| `make prod-plan` | Preview prod changes (never auto-approved)  |
-| `make prod-apply`| Apply prod changes (requires confirmation)  |
+| Command           | Effect                                     |
+| ----------------- | ------------------------------------------ |
+| `make dev-up`     | Spin up dev infrastructure                 |
+| `make dev-down`   | Tear down dev infrastructure (zero cost)   |
+| `make dev-plan`   | Preview changes before applying            |
+| `make prod-plan`  | Preview prod changes (never auto-approved) |
+| `make prod-apply` | Apply prod changes (requires confirmation) |
 
 ## GitHub repository secrets required for CI/CD
 
 After `make dev-up`, populate these in GitHub → Settings → Secrets:
 
-| Secret                | Source                          |
-|-----------------------|---------------------------------|
+| Secret                | Source                           |
+| --------------------- | -------------------------------- |
 | `AWS_DEPLOY_ROLE_ARN` | `github_actions_role_arn` output |
-| `ECR_REPOSITORY`      | `ecr_repository_url` output     |
-| `ECS_CLUSTER_NAME`    | `ecs_cluster_name` output       |
-| `ECS_SERVICE_NAME`    | `ecs_service_name` output       |
-| `ECS_TASK_FAMILY`     | `dev-go-crud`                   |
+| `ECR_REPOSITORY`      | `ecr_repository_url` output      |
+| `ECS_CLUSTER_NAME`    | `ecs_cluster_name` output        |
+| `ECS_SERVICE_NAME`    | `ecs_service_name` output        |
+| `ECS_TASK_FAMILY`     | `dev-go-crud`                    |
 
 ## Security invariants
 
