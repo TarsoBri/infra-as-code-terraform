@@ -1,0 +1,12 @@
+# Terraform state and lock files — never commit these
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Variable files with real secrets — commit only .tfvars.example
+*.tfvars
+!*.tfvars.example
+
+# OS artifacts
+.DS_Store
